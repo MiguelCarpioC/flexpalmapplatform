@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 // Middleware para manejar CORS
 app.use(cors({
-  origin: '*',
+  origin: ['https://healthandfit-458fd.web.app', 'http://localhost:5173'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,

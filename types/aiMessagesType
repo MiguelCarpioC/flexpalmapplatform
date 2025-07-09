@@ -1,0 +1,12 @@
+const { GraphQLObjectType, GraphQLInt, GraphQLNonNull, GraphQLList, GraphQLString } = require('graphql');
+
+const AiMessagesType = new GraphQLObjectType({
+  name: 'AiMessages',
+  fields: () => ({
+    id: { type: new GraphQLNonNull(GraphQLInt) },
+    userMessage: { type: new GraphQLList(GraphQLString) },
+    aiResponse: { type: new GraphQLList(GraphQLString) },
+  }),
+});
+
+module.exports = AiMessagesType;
